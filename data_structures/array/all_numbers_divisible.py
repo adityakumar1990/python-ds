@@ -20,3 +20,17 @@ def check(arr):
 arr = [20,10,15,5,100,200, 201]
 
 print(check(arr))
+
+#-----------------------------------------------------------------------#
+
+def findDivisor(arr):
+    if len(arr) == 0:
+        return "Zero Length Array !!"
+    elif len(arr) == 1:
+        return f"arr[0]"
+    else:
+        arr.sort()
+        for ele in arr[1:]:
+            if ele % arr[0] != 0:
+                return ("No such Element present in Array")
+    return f"{arr[0]} is the element !!" 
