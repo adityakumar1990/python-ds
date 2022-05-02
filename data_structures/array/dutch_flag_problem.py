@@ -24,3 +24,7 @@ print(arr)
 dutch(arr)
 print(arr)
 
+#-------------------------------------------------------------------------#
+#Adding python one linear
+def dutchFlag(arr):
+    return [ int(i) for i in list('0'*l.count(0)+ '1'* l.count(1) + '2'*l.count(2))]
