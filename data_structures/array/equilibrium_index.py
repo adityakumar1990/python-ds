@@ -21,3 +21,15 @@ def find_equi(arr):
 
 arr = [-7, 1, 5, 2, -4, 3, 0] 
 print(find_equi(arr))
+
+#-------------------------------------------------------------------------#
+#Using sum , break and enumerate 
+arr = [-7, 1, 5, 2, -4, 3, 0]
+arr = [1,1,10]
+
+def findEquilibrium(arr):
+    for ele in enumerate(arr):
+        if sum(arr[:ele[0]+1]) == sum(arr[ele[0]+1:]):
+            print(f"Equilibirum Index is {ele[0]}")
+            break
+findEquilibrium(arr)
