@@ -33,3 +33,16 @@ def findEquilibrium(arr):
             print(f"Equilibirum Index is {ele[0]}")
             break
 findEquilibrium(arr)
+
+"""
+# Sum of 2 parts will always be even
+"""
+def findEquilibrium(arr):
+    total_sum = sum(arr) // 2
+    counter = 0
+    for ele in arr:
+        total_sum -= ele
+        if total_sum == 0:
+            print(counter)
+            break
+        counter += 1
