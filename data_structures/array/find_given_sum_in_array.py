@@ -25,3 +25,20 @@ def find_sum(arr, s):
 arr = [15, 2, 4, 8, 9, 5, 10, 23] 
 
 print(find_sum(arr, 6))
+
+#-------------------------------------------------------------------------#
+def findSum(arr,checkSum):
+    lowercounter = 0
+    while lowercounter < len(arr):
+        uppercounter = lowercounter + 1
+        while True:
+            sumCounter = sum(arr[lowercounter:uppercounter])
+            if  checkSum == sumCounter:
+                print(arr[lowercounter:uppercounter])
+            elif checkSum < sumCounter:
+                break
+            elif uppercounter == len(arr):
+                break
+            uppercounter += 1
+        lowercounter += 1
+
