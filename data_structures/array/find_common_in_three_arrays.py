@@ -24,3 +24,13 @@ arr2 = [5,6,7,8,9]
 arr3 = [4,5,6,9,10]
 
 find_common(arr1, arr2, arr3)
+#-------------------------------------------------------------#
+def commonElement(arr1,arr2,arr3):
+    commonarr = []
+    for ele in arr1:
+        if ele in arr2 and ele in arr3:
+            commonarr.append(ele)
+    return commonarr
+#------------------------------------------------------------#
+#One more way is to find the common elementd between arr1 and arr2 and then find common elements between common element array and arr3 
+# for this 2 loops will be required 
